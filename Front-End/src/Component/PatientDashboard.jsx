@@ -25,7 +25,7 @@ export default function PatientDashboard() {
 
         <div class="d-flex justify-content-around"> 
 
-        <div className="card my-2 mx-1 border" style={{ width: "18rem" }}>
+        <div className="card my-2 mx-1 border hover_card" style={{ width: "18rem" }}>
        <img src={require('../Assets/book.jpg')} className="card-img-top" alt="..." />
        <div className="card-body text-center">
        <h5 className="card-text">
@@ -34,7 +34,7 @@ export default function PatientDashboard() {
        </div>    
       </div>
 
-      <div className="card my-2" style={{ width: "18rem" }}>
+      <div className="card my-2 hover_card" style={{ width: "18rem" }}>
        <img src={require('../Assets/Status.jpg')} className="card-img-top" alt="..." />
        <div className="card-body text-center">
        <h5 className="card-text">
@@ -45,7 +45,7 @@ export default function PatientDashboard() {
 </div>
 <div class="d-flex justify-content-around"> 
 
-<div className="card my-2 mx-1" style={{ width: "18rem" }} onClick={handelWatchStudyMaterial}>
+<div className="card my-2 mx-1 hover_card" style={{ width: "18rem" }} onClick={handelWatchStudyMaterial}>
        <img src={require('../Assets/study.jpg')} className="card-img-top" alt="..." />
        <div className="card-body text-center">
        <h5 className="card-text">
@@ -54,7 +54,31 @@ export default function PatientDashboard() {
        </div>       
 </div>
 
-<div className="card my-2" style={{ width: "18rem" }}>
+<div className="card my-2 hover_card" style={{ width: "18rem" }}>
+<br />
+<br/>
+<br/>
+       <img src={require('../Assets/refund.jpg')} className="card-img-top" alt="..." />
+       <div className="card-body text-center">
+       <h5 className="card-text">
+       <br/>
+       Refund History
+       </h5>
+       </div>       
+</div>
+
+</div>
+<div class="d-flex justify-content-around"> 
+<div className="card my-2 hover_card mx-1" style={{ width: "18rem" }}>
+       <img src={require('../Assets/settings.jpg')} className="card-img-top" alt="..." />
+       <div className="card-body text-center">
+       <h5 className="card-text">
+       Account details update
+       </h5>
+       </div>       
+</div>
+
+<div className="card my-2 hover_card" style={{ width: "18rem" }}>
        <img src={require('../Assets/issue.jpg')} className="card-img-top" alt="..." />
        <div className="card-body text-center">
        <h5 className="card-text">
@@ -62,8 +86,9 @@ export default function PatientDashboard() {
        </h5>
        </div>       
 </div>
-
 </div>
+
+
 
 
         <Footer/>

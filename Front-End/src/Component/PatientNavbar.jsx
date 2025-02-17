@@ -3,7 +3,7 @@ import React from 'react'
 export default function PatientNavbar() {
   return (
     <div>
-    <nav className="navbar navbar-light" style={{ backgroundColor: "#e3f2fd" }}>
+    <nav className="navbar navbar-light sticky-top" style={{ backgroundColor: "#e3f2fd" }}>
   <a className="navbar-brand" href="/PatientDashBoard">
     Shree Clinic
   </a>
@@ -25,36 +25,10 @@ export default function PatientNavbar() {
           Home <span className="sr-only">(current)</span>
         </a>
       </li>
-      <li className="nav-item">
+      <li className="nav-item active">
         <a className="nav-link" href="#">
-          Link
+        🔴 Log out <span className="sr-only">(current)</span>
         </a>
-      </li>
-      <li className="nav-item dropdown">
-        <a
-          className="nav-link dropdown-toggle"
-          href="#"
-          role="button"
-          data-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Dropdown
-        </a>
-        <div className="dropdown-menu">
-          <a className="dropdown-item" href="#">
-            Action
-          </a>
-          <a className="dropdown-item" href="#">
-            Another action
-          </a>
-          <div className="dropdown-divider" />
-          <a className="dropdown-item" href="#">
-            Something else here
-          </a>
-        </div>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link disabled">Disabled</a>
       </li>
     </ul>
 
