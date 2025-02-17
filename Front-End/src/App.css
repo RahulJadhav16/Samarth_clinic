@@ -1,0 +1,451 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.bgcolor{
+  background-color: rgb(252, 252, 252);
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+
+/* css for loader */
+.loader {
+border: 16px solid #f3f3f3; 
+border-top: 16px solid #fff701; 
+border-radius: 50%;
+width: 80px;
+height: 80px;
+animation: spin 2s linear infinite;
+margin: auto;
+
+
+
+
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+
+/* ///////////////////  CSS for Search box /////////////////////////*/
+
+.search-container{
+background: #fff;
+height: 30px;
+border-radius: 30px;
+padding: 10px 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+transition: 0.8s;
+/*box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+inset -7px -7px 10px 0px rgba(0,0,0,.1),
+7px 7px 20px 0px rgba(0,0,0,.1),
+4px 4px 5px 0px rgba(0,0,0,.1);
+text-shadow:  0px 0px 6px rgba(255,255,255,.3),
+          -4px -4px 6px rgba(116, 125, 136, .2);
+text-shadow: 2px 2px 3px rgba(255,255,255,0.5);*/
+box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+          -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+inset -4px -4px 6px 0 rgba(255,255,255,.2),
+inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.search-container:hover > .search-input{
+width: 250px;
+}
+
+.search-container .search-input{
+background: transparent;
+border: none;
+outline:none;
+width: 0px;
+font-weight: 500;
+font-size: 16px;
+transition: 0.8s;
+
+}
+
+.search-container .search-btn .fas{
+color: #5cbdbb;
+}
+
+@keyframes hoverShake {
+0% {transform: skew(0deg,0deg);}
+25% {transform: skew(5deg, 5deg);}
+75% {transform: skew(-5deg, -5deg);}
+100% {transform: skew(0deg,0deg);}
+}
+
+.search-container:hover{
+animation: hoverShake 0.15s linear 3;
+}
+
+.parent{
+display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Css for  Weather icons */
+
+.weather-sun,.weather-cloud,.weather-snow,.weather-cloudAndSun,.weather-rain{
+width: 200px;
+height: 200px;
+display: inline-block;
+position: relative;
+}
+
+.weather-cloudAndSun,.weather-rain{
+margin-left: 60px;
+}
+
+.sun{
+width: 100px;
+height: 100px;
+background: linear-gradient(45deg,#F3A966,yellow);
+border-radius: 100%;
+transform: rotate(0deg);
+animation: xuanzhuang 12s infinite linear;
+position: absolute;
+left: 50%;
+top: 30%;
+}
+
+.rays{
+width: 8px;
+height: 15px;
+background: yellow;
+position: absolute;
+transform: translateX(-50%);
+left: 50%;
+top: -25px;
+box-shadow: 0 135px yellow;
+border-radius: 4px;
+transform-origin: 0px 75px;
+}
+
+.rays:nth-child(2){
+transform: rotate(45deg);
+}
+
+.rays:nth-child(3){
+transform: rotate(90deg);
+}
+
+.rays:nth-child(4){
+transform: rotate(135deg);
+}
+
+@keyframes xuanzhuang {
+100% { transform: rotate(360deg); }
+}
+
+
+.cloud{
+border-radius: 25px;
+position: absolute;
+top: 70%;
+left: 50%;
+width: 150px;
+height: 50px;
+background: #cdedf8;
+}
+
+.cloud:nth-child(2){
+left: 200px;
+width: 100px;
+height: 30px;
+background: #cdedf8;
+opacity: 1;
+animation: cloud 8s linear infinite;
+}
+
+.cloud::after,.cloud::before{
+content: '';
+display: block;
+background: #cdedf8;
+border-radius: 50%;
+position: absolute;
+
+}
+
+.cloud:nth-child(2)::after,.cloud:nth-child(2)::before{
+content: '';
+display: block;
+background: #cdedf8;
+border-radius: 50%;
+position: absolute;
+
+}
+
+.cloud::after{
+width: 80px;
+height: 80px;
+left: 45px;
+top: -45px;
+}
+
+.cloud::before{
+width: 60px;
+height: 60px;
+top: -10px;
+left: 0;
+}
+
+.cloud:nth-child(2)::after{
+width: 50px;
+height: 50px;
+left: 35px;
+top: -30px;
+}
+
+.cloud:nth-child(2)::before{
+width: 40px;
+height: 40px;
+top: -10px;
+left: 0px;
+}
+
+@keyframes cloud {
+0% { opacity: 0; }
+50% { opacity: 1; }
+100% {
+  opacity: 0;
+  transform: scale(0.8) translateX(-200%);
+}
+}
+
+.snow{
+width: 150px;
+height: 10px;
+border-radius: 5px;
+background: #CDEDF8;
+transform: rotate(0deg);
+position: absolute;
+top: 50%;
+left: 40%;
+animation: Rotate 12s infinite linear;
+position: relative;
+}
+
+.snow::after,.snow::before{
+content: '';
+width: 150px;
+height: 10px;
+border-radius: 5px;
+background: #CDEDF8;
+position: absolute;
+}
+
+.snow::after{
+transform: rotate(60deg);
+}
+
+.snow::before{
+transform: rotate(120deg);
+}
+
+.f{
+width: 28px;
+height: 10px;
+border-radius: 5px;
+position: absolute;
+background: #CDEDF8;
+top: -45px;
+left: 25px;
+box-shadow: 0px 90px #CDEDF8,72px 90px #CDEDF8,72px 0px #CDEDF8;
+}
+
+.f::after,.f::before{
+content: '';
+width: 28px;
+height: 10px;
+transform: rotate(60deg);
+border-radius: 5px;
+position: absolute;
+background: #CDEDF8;
+top: -10px;
+left: 55px;
+box-shadow: 0px 90px #CDEDF8,72px 90px #CDEDF8,72px 0px #CDEDF8;
+}
+
+.f::before{
+transform: rotate(120deg);
+left: 15px;
+box-shadow: 72px 0px #CDEDF8,72px -90px #CDEDF8,0px -90px #CDEDF8;
+}
+
+@keyframes Rotate {
+100% { transform: rotate(360deg); }
+}
+
+.weather-cloudAndSun .cloud{
+z-index: 1;
+opacity: 0.95;
+}
+
+.weather-cloudAndSun .sun{
+position: absolute;
+left: 50px;
+
+z-index: 0;
+}
+
+.rain{
+width: 4px;
+height: 40px;
+background:linear-gradient(transparent,lightblue);
+position: absolute;
+left: 210px;
+top: 170px;
+border-radius: 2px;
+animation: rainning 2s infinite;
+}
+
+.rain:nth-child(2){
+height: 20px;
+left: 190px;
+top: 190px;
+}
+
+.rain:nth-child(3){
+height: 50px;
+left: 170px;
+top: 180px;
+}
+
+.rain:nth-child(4){
+height: 25px;
+left: 150px;
+top: 185px;
+}
+
+@keyframes rainning{
+100%{
+  top: 200px;
+}
+}
+
+/* Page not found css */
+.page_404{ 
+  padding:40px 0; background:#fff; font-family: 'Arvo', serif;
+ 
+}
+
+.page_404  img{ width:100%;}
+
+.four_zero_four_bg{
+
+background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+}
+
+
+.four_zero_four_bg h1{
+font-size:80px;
+}
+
+.four_zero_four_bg h3{
+     font-size:80px;
+     }
+
+     .link_404{			 
+color: #fff!important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;}
+.contant_box_404{ margin-top:-50px;}
+
+  .notfound{
+      margin-left: 250px;
+  }
