@@ -3,7 +3,7 @@ import React from 'react'
 export default function PatientNavbar() {
   return (
     <div>
-    <nav className="navbar navbar-light sticky-top" style={{ backgroundColor: "#e3f2fd" }}>
+    <nav className="navbar navbar-light sticky-top barlow-thin" style={{ backgroundColor: "#e3f2fd" }}>
   <a className="navbar-brand" href="/PatientDashBoard">
     Shree Clinic
   </a>

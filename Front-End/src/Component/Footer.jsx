@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer() {
   return (
     <div>
-      <footer className="bg-body-tertiary text-center text-lg-start my-5">
+      <footer className="bg-body-tertiary text-center text-lg-start my-5 barlow-thin">
   {/* Copyright */}
   <div
     className="text-center p-3"

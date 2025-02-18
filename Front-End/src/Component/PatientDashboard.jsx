@@ -13,7 +13,7 @@ export default function PatientDashboard() {
 
     }
   return (
-    <div className='container bgcolor'>
+    <div className='container bgcolor barlow-thin bg-img'>
         <PatientNavbar/>
         {/* Greet by name  */}
         <div class="alert alert-success my-1" role="alert">

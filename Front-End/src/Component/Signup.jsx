@@ -10,7 +10,7 @@ export default function Signup() {
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
      
-      <div className="d-flex justify-content-center align-items-center vh-130 my-4">   
+      <div className="d-flex justify-content-center align-items-center vh-130 my-4 barlow-thin">   
     <div className="card shadow-lg p-4" style={{ width: "400px", borderRadius: "60px" }}>
       <div className="text-center mb-3">
         <img src={signinimg} alt="Shree Clinic Logo" className="img-fluid" />
