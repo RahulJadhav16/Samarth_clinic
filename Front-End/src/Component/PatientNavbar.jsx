@@ -1,12 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function PatientNavbar() {
   return (
     <div>
     <nav className="navbar navbar-light sticky-top barlow-thin" style={{ backgroundColor: "#e3f2fd" }}>
-  <a className="navbar-brand" href="/PatientDashBoard">
+  <Link className="navbar-brand" to="/PatientDashBoard">
     Shree Clinic
-  </a>
+  </Link>
   <button
     className="navbar-toggler"
     type="button"
